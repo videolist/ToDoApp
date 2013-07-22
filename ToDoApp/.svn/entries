@@ -62,14 +62,14 @@ vadimdagman
 
 AppDelegate.m
 file
+1566
 
 
 
-
-2013-07-20T02:42:21.000000Z
-58adf1646cd80a15bc119c8ef0649d36
-2013-07-20T02:40:59.945475Z
-1560
+2013-07-22T10:51:01.000000Z
+89698a0122fc461e4c2e80d37eb6609a
+2013-07-22T10:59:30.718866Z
+1566
 vadimdagman
 
 
@@ -92,7 +92,7 @@ vadimdagman
 
 
 
-6926
+7503
 
 CustomCell.h
 file
@@ -130,14 +130,14 @@ vadimdagman
 
 CustomCell.m
 file
-1565
+1566
 
 
 
-2013-07-20T20:10:04.000000Z
-ed520f974e59da5fcc23bcd1eb396031
-2013-07-20T20:13:40.495471Z
-1565
+2013-07-22T06:12:04.000000Z
+6c19acf9a83695413387d758a6e3b068
+2013-07-22T10:59:30.718866Z
+1566
 vadimdagman
 
 
@@ -160,7 +160,7 @@ vadimdagman
 
 
 
-6504
+6535
 
 Default-568h@2x.png
 file
@@ -324,14 +324,14 @@ vadimdagman
 
 DetailViewController.m
 file
-1564
+1566
 
 
 
-2013-07-20T19:52:54.000000Z
-d6dd1dd072f56a9d1d90c4ac606efc18
-2013-07-20T19:54:25.944052Z
-1564
+2013-07-22T10:51:01.000000Z
+fc14edd45364eff8b06dcb26f3708b4b
+2013-07-22T10:59:30.718866Z
+1566
 vadimdagman
 
 
@@ -354,21 +354,21 @@ vadimdagman
 
 
 
-4763
+4515
 
 Images
 dir
 
-MasterViewController.h
+LoginViewController.h
 file
-1561
+1566
 
 
 
-2013-07-20T07:16:54.000000Z
-740461b4b116ee14aad23edbf400886a
-2013-07-20T16:59:55.092843Z
-1561
+2013-07-22T07:28:54.000000Z
+f6d8c5d6639930efe603e64951148876
+2013-07-22T10:59:30.718866Z
+1566
 vadimdagman
 
 
@@ -391,18 +391,86 @@ vadimdagman
 
 
 
-767
+477
+
+LoginViewController.m
+file
+1566
+
+
+
+2013-07-22T07:28:54.000000Z
+a896d65b9a8bb62ea135327770d0c922
+2013-07-22T10:59:30.718866Z
+1566
+vadimdagman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2580
+
+MasterViewController.h
+file
+1566
+
+
+
+2013-07-22T04:13:59.000000Z
+65b4545ac0e51f306863734037a0df49
+2013-07-22T10:59:30.718866Z
+1566
+vadimdagman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+822
 
 MasterViewController.m
 file
-1565
+1566
 
 
 
-2013-07-20T20:02:56.000000Z
-896610c7ab2c430a525cb5a78aa9b7b7
-2013-07-20T20:13:40.495471Z
-1565
+2013-07-22T10:51:01.000000Z
+7eca3847bf146989c2a5d92303ea6359
+2013-07-22T10:59:30.718866Z
+1566
 vadimdagman
 
 
@@ -425,7 +493,7 @@ vadimdagman
 
 
 
-10720
+11760
 
 ToDoApp-Info.plist
 file
@@ -463,14 +531,14 @@ vadimdagman
 
 ToDoApp-Prefix.pch
 file
+1566
 
 
 
-
-2013-07-20T02:42:21.000000Z
-713c23569d6a095a22104fe068bef05b
-2013-07-20T02:40:59.945475Z
-1560
+2013-07-21T18:56:17.000000Z
+ec23c4b07fdbd869cb70588aaa2b93d5
+2013-07-22T10:59:30.718866Z
+1566
 vadimdagman
 
 
@@ -493,21 +561,21 @@ vadimdagman
 
 
 
-351
+441
 
 ToDoApp.xcdatamodeld
 dir
 
 TodoItem.h
 file
-1564
+1566
 
 
 
-2013-07-20T19:43:39.000000Z
-0d18a878c603284947a9eceb9ffea18c
-2013-07-20T19:54:25.944052Z
-1564
+2013-07-22T10:28:48.000000Z
+89c7c0b8c8c0a0bcf895148ff04e5631
+2013-07-22T10:59:30.718866Z
+1566
 vadimdagman
 
 
@@ -530,18 +598,18 @@ vadimdagman
 
 
 
-680
+881
 
 TodoItem.m
 file
-1564
+1566
 
 
 
-2013-07-20T19:43:39.000000Z
-82dd6d65bcd4c21d75017b231a2e305d
-2013-07-20T19:54:25.944052Z
-1564
+2013-07-22T10:28:48.000000Z
+cefd78e838274f73ec659afceddd8ada
+2013-07-22T10:59:30.718866Z
+1566
 vadimdagman
 
 
@@ -564,7 +632,75 @@ vadimdagman
 
 
 
-1261
+1338
+
+User.h
+file
+1566
+
+
+
+2013-07-22T10:05:21.000000Z
+4d31459189bb4c61f3a3550a8746eb46
+2013-07-22T10:59:30.718866Z
+1566
+vadimdagman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1278
+
+User.m
+file
+1566
+
+
+
+2013-07-22T10:51:01.000000Z
+1600293af4ae8e3e1e3cf155d4e6795b
+2013-07-22T10:59:30.718866Z
+1566
+vadimdagman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5709
 
 en.lproj
 dir
