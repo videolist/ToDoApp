@@ -19,7 +19,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UIView *loginView;
 - (IBAction)sortOrderChanged:(id)sender;
 - (IBAction)tapAction:(id)sender;
-
 @end

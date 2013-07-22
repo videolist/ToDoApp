@@ -7,6 +7,25 @@
 //
 
 #import "AppDelegate.h"
+/*
+ Import the StackMob header.
+ */
+#import "StackMob.h"
+#import "User.h"
+
+
+@interface AppDelegate ()
+
+/*
+ We define the 2 main components of the StackMob iOS SDK:
+ 
+ An SMClient instance is used as the outlet to every other SDK component we might use.
+ An SMCoreDataStore instance initializes our custom Core Data stack and gets it ready for persistence. It will also be our outlet for interacting with the caching and syncing systems.
+ */
+@property (strong, nonatomic) SMClient *client;
+@property (strong, nonatomic) SMCoreDataStore *coreDataStore;
+
+@end
 
 #import "MasterViewController.h"
 
@@ -18,10 +37,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    /*
+     Initialization of the StackMob components.
+     
+     We also turn on the caching system so fetched objects are stored locally and loading them into memory does not require additional network calls.
+     */
+    SM_CACHE_ENABLED = YES;
+    self.client = [[SMClient alloc] initWithAPIVersion:@"0" publicKey:@"d5b7c65a-6ff7-4620-b350-f6a6beddd12d"];
+    self.coreDataStore = [self.client coreDataStoreWithManagedObjectModel:self.managedObjectModel];
+    // Initialize user object and login if there is a cached login info
+
     return YES;
 }
 							
@@ -77,11 +102,7 @@
         return _managedObjectContext;
     }
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-    }
+    _managedObjectContext = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
     return _managedObjectContext;
 }
 

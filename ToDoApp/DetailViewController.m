@@ -39,21 +39,15 @@
     [self.textView sendSubviewToBack:imageView];
     if (self.todoItem) {
         self.textView.text = self.todoItem.title;
-//        NSDate* dueDate = self.todoItem.dueDate;
         self.dueDateLabel.text = [TodoItem stringForDate:self.todoItem.dueDate];
         self.priorityLabel.text = [TodoItem stringForPriority:self.todoItem.priority];
         [self.priorityPicker selectRow:[self.todoItem.priority intValue] inComponent:0 animated:NO];
         self.checkMarkImageView.hidden = ![self.todoItem.completed intValue];
-//        [self setDate:self.todoItem.dueDate];
     }
     
     self.tapGestureRecognizer.enabled = NO;
 }
 
-//- (void) setDate: (NSDate*) date {
-//    self.dueDateLabel.text = [TodoItem stringForDate:date];
-//}
-//
 #pragma mark - UITextViewDelegate
 
 -(void) textViewDidBeginEditing:(UITextView *)textView {
@@ -135,7 +129,6 @@
 - (IBAction)dateChangedAction:(id)sender {
     self.todoItem.dueDate = self.datePicker.date;
     self.dueDateLabel.text = [TodoItem stringForDate:self.todoItem.dueDate];
-//    [self setDate:self.datePicker.date];
 }
 
 

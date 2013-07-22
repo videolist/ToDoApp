@@ -23,6 +23,10 @@ typedef enum  {
 @property (nonatomic, retain) NSDate * dueDate;
 @property (nonatomic, retain) NSNumber * priority;
 @property (nonatomic, retain) NSNumber * completed;
+@property (nonatomic, retain) NSString * todoId;
+@property (nonatomic, retain) NSString * owner;
+@property (nonatomic, retain) NSDate * createddate;
+@property (nonatomic, retain) NSDate * lastmoddate;
 
 + (NSString*) stringForDate: (NSDate*) date;
 + (NSString*) stringForPriority: (NSNumber*) priority;
