@@ -16,6 +16,10 @@
 @dynamic dueDate;
 @dynamic priority;
 @dynamic completed;
+@dynamic todoId;
+@dynamic createddate;
+@dynamic lastmoddate;
+@dynamic owner;
 
 + (NSString*) stringForDate:(NSDate *)date {
     NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"MM/dd/YYYY" options:0

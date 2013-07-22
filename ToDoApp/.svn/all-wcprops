@@ -25,7 +25,7 @@ MasterViewController.m
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/root/!svn/ver/1565/ToDoApp/ToDoApp/MasterViewController.m
+/root/!svn/ver/1566/ToDoApp/ToDoApp/MasterViewController.m
 END
 Default-568h@2x.png
 K 25
@@ -33,17 +33,41 @@ svn:wc:ra_dav:version-url
 V 55
 /root/!svn/ver/1560/ToDoApp/ToDoApp/Default-568h@2x.png
 END
+LoginViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/root/!svn/ver/1566/ToDoApp/ToDoApp/LoginViewController.h
+END
 AppDelegate.m
 K 25
 svn:wc:ra_dav:version-url
 V 49
-/root/!svn/ver/1560/ToDoApp/ToDoApp/AppDelegate.m
+/root/!svn/ver/1566/ToDoApp/ToDoApp/AppDelegate.m
+END
+User.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/root/!svn/ver/1566/ToDoApp/ToDoApp/User.h
+END
+LoginViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/root/!svn/ver/1566/ToDoApp/ToDoApp/LoginViewController.m
+END
+User.m
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/root/!svn/ver/1566/ToDoApp/ToDoApp/User.m
 END
 ToDoApp-Prefix.pch
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/root/!svn/ver/1560/ToDoApp/ToDoApp/ToDoApp-Prefix.pch
+/root/!svn/ver/1566/ToDoApp/ToDoApp/ToDoApp-Prefix.pch
 END
 DetailViewController.h
 K 25
@@ -61,19 +85,19 @@ DetailViewController.m
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/root/!svn/ver/1564/ToDoApp/ToDoApp/DetailViewController.m
+/root/!svn/ver/1566/ToDoApp/ToDoApp/DetailViewController.m
 END
 CustomCell.m
 K 25
 svn:wc:ra_dav:version-url
 V 48
-/root/!svn/ver/1565/ToDoApp/ToDoApp/CustomCell.m
+/root/!svn/ver/1566/ToDoApp/ToDoApp/CustomCell.m
 END
 TodoItem.h
 K 25
 svn:wc:ra_dav:version-url
 V 46
-/root/!svn/ver/1564/ToDoApp/ToDoApp/TodoItem.h
+/root/!svn/ver/1566/ToDoApp/ToDoApp/TodoItem.h
 END
 main.m
 K 25
@@ -85,7 +109,7 @@ TodoItem.m
 K 25
 svn:wc:ra_dav:version-url
 V 46
-/root/!svn/ver/1564/ToDoApp/ToDoApp/TodoItem.m
+/root/!svn/ver/1566/ToDoApp/ToDoApp/TodoItem.m
 END
 Default.png
 K 25
@@ -97,5 +121,5 @@ MasterViewController.h
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/root/!svn/ver/1561/ToDoApp/ToDoApp/MasterViewController.h
+/root/!svn/ver/1566/ToDoApp/ToDoApp/MasterViewController.h
 END

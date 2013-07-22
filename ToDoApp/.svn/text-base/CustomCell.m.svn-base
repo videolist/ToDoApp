@@ -22,6 +22,7 @@
     
     _todoItem = newTodoItem;
     if ( _todoItem ) {
+        self.title.text = @"";
         [_todoItem addObserver:self forKeyPath:@"dueDate" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionInitial context:nil];
         [_todoItem addObserver:self forKeyPath:@"priority" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionInitial context:nil];
         [_todoItem addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionInitial context:nil];

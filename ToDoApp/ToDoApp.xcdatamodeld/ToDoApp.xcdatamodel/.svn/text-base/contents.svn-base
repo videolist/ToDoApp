@@ -2,15 +2,26 @@
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Todo" representedClassName="TodoItem">
         <attribute name="completed" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="createdate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastmoddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="priority" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="timeStamp" optional="YES" attributeType="Date">
             <userInfo/>
         </attribute>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="todoId" optional="YES" attributeType="String" syncable="YES"/>
         <userInfo/>
     </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="createdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastmoddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="todos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Todo" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Todo" positionX="457" positionY="282" width="128" height="120"/>
+        <element name="Todo" positionX="457" positionY="282" width="128" height="180"/>
+        <element name="User" positionX="160" positionY="192" width="128" height="105"/>
     </elements>
 </model>

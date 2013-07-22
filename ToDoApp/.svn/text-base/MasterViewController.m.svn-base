@@ -6,11 +6,16 @@
 //  Copyright (c) 2013 Vadim. All rights reserved.
 //
 
+/*
+ Import the StackMob, Todo and Detail View Controller headers.
+ */
+#import "StackMob.h"
 #import "MasterViewController.h"
 
 #import "DetailViewController.h"
 #import "CustomCell.h"
 #import "TodoItem.h"
+#import "User.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -31,19 +36,37 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    CGRect frame = self.loginView.frame;
+    frame.origin.y = 0;
+    self.loginView.frame = frame;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSError* error;
-    [context save:&error];
-    [self.tableView reloadData];
+    [User loginWithCashedCredentialsAndCompletionBlock:^(bool Success) {
+        if (Success ) {
+            [self saveContext];
+            [NSFetchedResultsController deleteCacheWithName:@"Master"];
+            _fetchedResultsController = nil; // Invalidate fetch controller to do  new fetch
+            [self.tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
+        } else {
+            [self performSelector:@selector(login) withObject:nil afterDelay:0.5];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) login {
+    UIStoryboard *storyBoard =  [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIViewController* vc = [storyBoard instantiateViewControllerWithIdentifier: @"LoginViewController"];
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 - (void)insertNewObject:(id)sender
@@ -55,15 +78,12 @@
     // If appropriate, configure the new managed object.
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
     newManagedObject.timeStamp = [NSDate date];
+    newManagedObject.todoId = [newManagedObject assignObjectId];
+    newManagedObject.owner = [User username];
     
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-         // Replace this implementation with code to handle the error appropriately.
-         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
+    [self saveContext];
+    [User addTodosObject:newManagedObject withCompletionBlock:^(bool Success) {
+    }];
 }
 
 #pragma mark - Table View
@@ -95,17 +115,16 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
         
-        NSError *error = nil;
-        if (![context save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-    }   
+        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        TodoItem* itemToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [User removeTodosObject:itemToDelete withCompletionBlock:^(bool Success) {
+            if (Success) {
+                [context deleteObject:itemToDelete];
+                [self saveContext];
+            }
+        }];
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
@@ -123,6 +142,7 @@
     }
 }
 
+
 #pragma mark - Fetched results controller
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -138,7 +158,7 @@
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
-    
+
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor;
     if ( self.segmentedControl.selectedSegmentIndex == 0 )
@@ -151,22 +171,27 @@
     
     [fetchRequest setSortDescriptors:sortDescriptors];
     
+    
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
     aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
+    _fetchedResultsController = aFetchedResultsController;
     
-	NSError *error = nil;
-	if (![self.fetchedResultsController performFetch:&error]) {
-	     // Replace this implementation with code to handle the error appropriately.
-	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	    abort();
-	}
+    NSPredicate* predicate = [NSPredicate predicateWithFormat: @"owner == %@", [User username]];
+    [fetchRequest setPredicate:predicate];
+
+    NSError *error = nil;
+    if (![_fetchedResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
     
     return _fetchedResultsController;
-}    
+
+}
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
@@ -220,6 +245,26 @@
     [self.tableView endUpdates];
 }
 
+- (NSManagedObjectContext *)managedObjectContext
+{
+    if (_managedObjectContext != nil) {
+        return _managedObjectContext;
+    }
+    _managedObjectContext = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
+    return _managedObjectContext;
+}
+
+- (void) saveContext {
+    NSManagedObjectContext *context = [[[SMClient defaultClient] coreDataStore] contextForCurrentThread];
+    [context saveOnSuccess:^{
+        NSLog(@"Save success");
+    } onFailure:^(NSError *error) {
+        NSLog(@"Error saving: %@", error);
+    }];
+    
+}
+
+
 /*
 // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
  
@@ -267,9 +312,7 @@
         [cellShowingPicker_ hidePickers];
         cellShowingPicker_ = nil;
         self.tapGestureRecognizer.enabled = NO;
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        NSError* error;
-        [context save:&error];
+        [self saveContext];
     }
 }
 

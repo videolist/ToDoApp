@@ -1,0 +1,251 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers
+END
+NSManagedObject+StackMobSerialization.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/NSManagedObject+StackMobSerialization.h
+END
+SMRequestOptions.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMRequestOptions.h
+END
+AFHTTPClient+StackMob.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/AFHTTPClient+StackMob.h
+END
+Common.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/Common.h
+END
+SMError.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMError.h
+END
+SMQuery.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMQuery.h
+END
+KeychainWrapper.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/KeychainWrapper.h
+END
+SMUserSession.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMUserSession.h
+END
+SMSyncedObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMSyncedObject.h
+END
+SMDataStore.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMDataStore.h
+END
+SystemInformation.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SystemInformation.h
+END
+NSManagedObjectContext+Concurrency.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/NSManagedObjectContext+Concurrency.h
+END
+SMVersion.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMVersion.h
+END
+SMDataStore+Protected.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMDataStore+Protected.h
+END
+NSDictionary+AtomicCounter.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/NSDictionary+AtomicCounter.h
+END
+NSEntityDescription+StackMobSerialization.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/NSEntityDescription+StackMobSerialization.h
+END
+SMIncrementalStore.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMIncrementalStore.h
+END
+SMResponseBlocks.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMResponseBlocks.h
+END
+Base64EncodedStringFromData.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/Base64EncodedStringFromData.h
+END
+AFHTTPRequestOperation+RemoveContentType.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/AFHTTPRequestOperation+RemoveContentType.h
+END
+SMNetworkReachability.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMNetworkReachability.h
+END
+StackMobPush.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/StackMobPush.h
+END
+SMCustomCodeRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMCustomCodeRequest.h
+END
+StackMob.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/StackMob.h
+END
+SMGeoPoint.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMGeoPoint.h
+END
+SMUserManagedObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMUserManagedObject.h
+END
+SMJSONRequestOperation.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMJSONRequestOperation.h
+END
+SMBinaryDataConversion.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMBinaryDataConversion.h
+END
+SMPredicate.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMPredicate.h
+END
+SMCoreDataStore.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMCoreDataStore.h
+END
+SMIncrementalStore+Query.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMIncrementalStore+Query.h
+END
+SMLocationManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMLocationManager.h
+END
+FileManagement.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/FileManagement.h
+END
+NSArray+Enumerable.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/NSArray+Enumerable.h
+END
+SMOAuth1Client.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMOAuth1Client.h
+END
+SMPushClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMPushClient.h
+END
+SMOAuth2Client.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMOAuth2Client.h
+END
+Synchronization.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/Synchronization.h
+END
+SMIncrementalStoreNode.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMIncrementalStoreNode.h
+END
+SMClient.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMClient.h
+END
+SMPushToken.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/root/!svn/ver/1566/ToDoApp/StackMob-v2.0.0/Headers/SMPushToken.h
+END
